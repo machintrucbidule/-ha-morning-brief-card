@@ -49,8 +49,10 @@ Spec gotchas G1–G15 apply where relevant. Frontend-specific additions:
 ## Open questions / blockers
 
 - The card implementation does not start until backend Phase 9 (services / sensor entity) is done, since the card needs a working `sensor.morning_brief_*` and the `morning_brief.get_last_brief` service to drive against. Frontend repo is scaffolded only for now.
-- `git init` for this subrepo is deferred until the user is ready to commit / push.
+- Card-repo HACS Validate will continue to fail until Phase 10 produces `dist/morning-brief-card.js` (HACS plugin repos must ship a JS bundle).
+- Card-repo Lint & Build will continue to fail until Phase 10 fills `package.json` with real dependencies.
 
 ## Session log
 
 - 2026-05-15 — Created memory files (CLAUDE.md, DECISIONS.md, PROGRESS.md). Scaffolded the frontend repo file tree per Section 3.2 with stub files (`src/*.ts`, `src/components/*.ts`, `src/utils/*.ts`, `src/styles/*.ts`, `src/i18n/{en,fr}.json` + loader, `tests/*.test.ts`, `dist/.gitkeep`, `docs/`). No code yet — Phase 10 starts only after backend Phase 9 lands.
+- 2026-05-15 — Initial push of scaffolding. Repo created by user as `-ha-morning-brief-card`, renamed to `ha-morning-brief-card` shortly after; local remote URL updated. `hacs.json` `country` field corrected to `["FR", "US", "GB"]` (geography for FR + EN-speaking audiences). Note that the EN language support of the project lives in `src/i18n/en.json` independently of this field.
