@@ -1,0 +1,14 @@
+{
+  "name": "morning-brief-card",
+  "version": "0.0.0",
+  "description": "Lovelace custom card for the home-assistant-morning-brief integration.",
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -c -w",
+    "lint": "eslint 'src/**/*.ts'",
+    "test": "echo 'tests added in Phase 10' && exit 0"
+  },
+  "devDependencies": {},
+  "dependencies": {}
+}

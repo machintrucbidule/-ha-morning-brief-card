@@ -1,0 +1,3 @@
+# Stub — Phase 11.
+type: custom:morning-brief-card
+entity: sensor.morning_brief_default
