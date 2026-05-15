@@ -1,1 +1,38 @@
-{}
+{
+  "card": {
+    "loading": "Chargement…",
+    "no_data": "Aucun brief disponible pour l'instant.",
+    "error_prefix": "Impossible de charger le brief : ",
+    "no_alerts": "Aucune alerte.",
+    "verdict": "Verdict",
+    "alerts": "Alertes",
+    "weather": "Météo",
+    "navigate_prev": "Brief précédent",
+    "navigate_next": "Brief suivant",
+    "refresh": "Rafraîchir",
+    "settings": "Paramètres",
+    "logical_date": "Date logique",
+    "ai_status_disabled": "IA désactivée",
+    "ai_status_degraded": "IA dégradée",
+    "ai_status_ok": "IA ok",
+    "stale_no_data": "Pas de donnée",
+    "stale_no_event_today": "Pas d'événement aujourd'hui",
+    "stale_awaiting_availability": "En attente",
+    "stale_gate_sensor_unavailable": "Capteur de gate indisponible",
+    "stale_no_data_for_date": "Pas de donnée pour cette date",
+    "severity_critical": "Critique",
+    "severity_warning": "Avertissement",
+    "severity_info": "Info"
+  },
+  "editor": {
+    "entity": "Entité",
+    "entity_help": "Une entité sensor.morning_brief_* créée par l'intégration.",
+    "compact_mode": "Mode compact",
+    "show_history_nav": "Afficher la navigation d'historique",
+    "show_ai_sections": "Afficher les sections IA (insights, verdict)",
+    "show_alerts": "Afficher les alertes",
+    "show_weather": "Afficher la météo",
+    "show_footer": "Afficher le pied de page",
+    "theme_override": "Override d'accent CSS"
+  }
+}

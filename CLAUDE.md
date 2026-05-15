@@ -44,7 +44,7 @@ Spec gotchas G1–G15 apply where relevant. Frontend-specific additions:
 
 - [x] Step 0: memory files created
 - [x] Step 1: repo scaffolding
-- [ ] Phase 10: Frontend card (not yet started — waits until backend Phase 9 is complete)
+- [x] Phase 10: Frontend card (V1 — first end-to-end render of the canonical brief)
 
 ## Open questions / blockers
 
@@ -56,3 +56,4 @@ Spec gotchas G1–G15 apply where relevant. Frontend-specific additions:
 
 - 2026-05-15 — Created memory files (CLAUDE.md, DECISIONS.md, PROGRESS.md). Scaffolded the frontend repo file tree per Section 3.2 with stub files (`src/*.ts`, `src/components/*.ts`, `src/utils/*.ts`, `src/styles/*.ts`, `src/i18n/{en,fr}.json` + loader, `tests/*.test.ts`, `dist/.gitkeep`, `docs/`). No code yet — Phase 10 starts only after backend Phase 9 lands.
 - 2026-05-15 — Initial push of scaffolding. Repo created by user as `-ha-morning-brief-card`, renamed to `ha-morning-brief-card` shortly after; local remote URL updated. `hacs.json` `country` field corrected to `["FR", "US", "GB"]` (geography for FR + EN-speaking audiences). Note that the EN language support of the project lives in `src/i18n/en.json` independently of this field.
+- 2026-05-15 — Phase 10 (Frontend card V1) shipped. `package.json` finalised with lit 3 + custom-card-helpers + rollup toolchain. `src/types.ts` mirrors Section 15 canonical JSON. `src/i18n/{en,fr}.json` populated to 32 keys with parity. `src/utils/` covers locale formatting, theme-aware colour mapping, brief parsing with D18/G13 truncation fallback via `connection.sendMessagePromise({ type: "call_service", return_response: true })`, and history navigation. `src/components/` exposes 8 LitElement custom elements (sparkline, header, alerts, category, field, weather, verdict, footer) — all use `createRenderRoot: this` for theming so HA CSS variables (`--primary-color`, etc.) apply. `src/styles/card.css.ts` carries the shared styles. `src/card.ts` (rationale: orchestrator) handles state (current brief + history index + loading + error), wires the components, drives the `< >` nav (prev/next via `loadHistorical` from the previous_briefs_refs list, refresh via `morning_brief.generate(force=true)`), and exposes `setConfig` / `getConfigElement` / `getStubConfig`. `src/editor.ts` exposes the 8 config fields (entity, compact_mode, show_*, theme_override). `src/index.ts` registers the customCard and logs version. `npm install` + `tsc --noEmit` + `eslint` + `rollup` all green locally: bundle is 37 KB minified, committed to `dist/morning-brief-card.js` with sourcemap. .gitignore updated to allow the dist bundle through (HACS plugin convention).

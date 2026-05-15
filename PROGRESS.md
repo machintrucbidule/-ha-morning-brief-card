@@ -16,30 +16,20 @@ Live checklist for the frontend repo. Updated continuously. The card phase (Phas
 - [x] docs/ tree (img/, examples/)
 
 ## Phase 10 — Frontend card
-- [ ] package.json deps + scripts (lit, rollup plugins, eslint, prettier, ts)
-- [ ] tsconfig.json (strict, target ES2020, lib DOM)
-- [ ] rollup.config.js (bundle to dist/morning-brief-card.js)
-- [ ] src/types.ts (mirror canonical JSON)
-- [ ] src/i18n/{en,fr}.json + src/i18n/index.ts loader
-- [ ] src/utils/format.ts
-- [ ] src/utils/colors.ts
-- [ ] src/utils/data.ts (parsing, truncation detection)
-- [ ] src/utils/history.ts (history navigation)
-- [ ] src/components/sparkline.ts
-- [ ] src/components/header.ts
-- [ ] src/components/footer.ts
-- [ ] src/components/alerts.ts
-- [ ] src/components/field.ts
-- [ ] src/components/category.ts
-- [ ] src/components/weather.ts
-- [ ] src/components/verdict.ts
-- [ ] src/styles/card.css.ts
-- [ ] src/card.ts (MorningBriefCard)
-- [ ] src/editor.ts (MorningBriefCardEditor)
-- [ ] src/index.ts (registration)
-- [ ] Bundle config + dist output
-- [ ] Tests on utils + card smoke test
-- [ ] Manual test against a real running integration
+- [x] package.json deps + scripts
+- [x] tsconfig.json (strict, ES2020 + DOM)
+- [x] rollup.config.js (bundle → dist/morning-brief-card.js, inlineDynamicImports)
+- [x] src/types.ts (mirror canonical JSON, Section 42)
+- [x] src/i18n/{en,fr}.json + src/i18n/index.ts loader (32 keys parity)
+- [x] src/utils/{format,colors,data,history}.ts
+- [x] src/components/{sparkline,header,footer,alerts,field,category,weather,verdict}.ts
+- [x] src/styles/card.css.ts
+- [x] src/card.ts (MorningBriefCard with rationale header)
+- [x] src/editor.ts (MorningBriefCardEditor)
+- [x] src/index.ts (registration + customCards entry)
+- [x] Bundle config + dist output committed (37 KB minified + sourcemap)
+- [ ] Tests on utils + card smoke test (deferred to Phase 11/12)
+- [ ] Manual test against a real running integration (Phase 12)
 
 ## Phase 11 — Docs & examples
 - [ ] README.md

@@ -1,6 +1,9 @@
 node_modules/
+# HACS expects the built JS bundle in `dist/` to be committed.
 dist/*
 !dist/.gitkeep
+!dist/morning-brief-card.js
+!dist/morning-brief-card.js.map
 *.log
 .DS_Store
 .idea/

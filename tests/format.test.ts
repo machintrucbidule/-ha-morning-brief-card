@@ -1,1 +1,2 @@
-// Stub — Phase 10. Test format.
+// Placeholder — see tests/card.test.ts.
+export {};

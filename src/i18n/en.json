@@ -1,1 +1,38 @@
-{}
+{
+  "card": {
+    "loading": "Loading…",
+    "no_data": "No brief available yet.",
+    "error_prefix": "Couldn't load the brief: ",
+    "no_alerts": "No alerts.",
+    "verdict": "Verdict",
+    "alerts": "Alerts",
+    "weather": "Weather",
+    "navigate_prev": "Previous brief",
+    "navigate_next": "Next brief",
+    "refresh": "Refresh",
+    "settings": "Settings",
+    "logical_date": "Logical date",
+    "ai_status_disabled": "AI off",
+    "ai_status_degraded": "AI degraded",
+    "ai_status_ok": "AI ok",
+    "stale_no_data": "No data",
+    "stale_no_event_today": "No event today",
+    "stale_awaiting_availability": "Awaiting availability",
+    "stale_gate_sensor_unavailable": "Gate sensor unavailable",
+    "stale_no_data_for_date": "No data for this date",
+    "severity_critical": "Critical",
+    "severity_warning": "Warning",
+    "severity_info": "Info"
+  },
+  "editor": {
+    "entity": "Entity",
+    "entity_help": "A sensor.morning_brief_* entity created by the integration.",
+    "compact_mode": "Compact mode",
+    "show_history_nav": "Show history navigation",
+    "show_ai_sections": "Show AI sections (insights, verdict)",
+    "show_alerts": "Show alerts",
+    "show_weather": "Show weather",
+    "show_footer": "Show footer",
+    "theme_override": "Theme accent override (CSS color)"
+  }
+}
