@@ -32,10 +32,11 @@ Live checklist for the frontend repo. Updated continuously. The card phase (Phas
 - [ ] Manual test against a real running integration (Phase 12)
 
 ## Phase 11 — Docs & examples
-- [ ] README.md
-- [ ] CHANGELOG.md
-- [ ] docs/examples/basic.yaml
-- [ ] docs/examples/compact.yaml
+- [x] README.md (10 sections per Section 31)
+- [x] CHANGELOG.md
+- [x] info.md
+- [x] docs/examples/basic.yaml
+- [x] docs/examples/compact.yaml
 
 ## Phase 12 — Polish & release prep
 - [ ] tsc --strict clean
