@@ -1,10 +1,16 @@
 # morning-brief-card
 
+![HACS plugin](https://img.shields.io/badge/HACS-plugin-blue)
+![Build](https://github.com/machintrucbidule/ha-morning-brief-card/actions/workflows/lint-build.yml/badge.svg)
+![License](https://img.shields.io/badge/license-MIT-green)
+
 > Lovelace custom card that renders the canonical JSON produced by the
 > `home-assistant-morning-brief` integration.
 
 Distributed via HACS. See the companion integration repo:
 <https://github.com/machintrucbidule/ha-morning-brief>.
+
+> _Real screenshots land in Phase 11 (release prep)._
 
 ## Status
 
