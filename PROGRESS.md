@@ -39,8 +39,12 @@ Live checklist for the frontend repo. Updated continuously. The card phase (Phas
 - [x] docs/examples/compact.yaml
 
 ## Phase 12 — Polish & release prep
-- [ ] tsc --strict clean
-- [ ] ESLint clean
-- [ ] npm run build produces dist
-- [ ] HACS validation passes
-- [ ] Tag v1.0.0
+- [x] tsc --strict clean (CI Lint & Build)
+- [x] ESLint clean (CI)
+- [x] npm run build produces dist (CI; committed at dist/morning-brief-card.js, 37 KB minified)
+- [x] HACS validation passes
+- [x] preview.png placeholder generated in docs/img/
+- [x] MORNING_BRIEF_SPEC.md removed from this repo per release decision (kept in integration repo)
+- [x] CLAUDE.md + PROGRESS.md updated to reflect v1.0.0-rc.1 state
+- [x] Tag v1.0.0-rc.1 (release candidate — final v1.0.0 pending manual HA validation)
+- [ ] Tag v1.0.0 (after user validates: live HA install, browser-rendered manual test, real screenshot)

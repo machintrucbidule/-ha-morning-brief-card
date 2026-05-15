@@ -4,7 +4,7 @@
 
 This file is your persistent memory. Read it at the start of every session BEFORE doing anything else. Update the "Current status", "Open questions", and "Session log" sections at the END of every session.
 
-The full specification lives in `MORNING_BRIEF_SPEC.md` (committed at the project root next to this repo's parent folder). When in doubt about ANY behavior, refer to the spec. Do not infer.
+The full specification lives in `MORNING_BRIEF_SPEC.md`, committed in the sibling integration repo (`../home-assistant-morning-brief/MORNING_BRIEF_SPEC.md`) and at the parent project root. The spec is intentionally NOT duplicated in this card repo to keep the HACS-published payload lean. When in doubt about ANY behavior, refer to the spec. Do not infer.
 
 ## Project context
 
@@ -46,12 +46,18 @@ Spec gotchas G1–G15 apply where relevant. Frontend-specific additions:
 - [x] Step 1: repo scaffolding
 - [x] Phase 10: Frontend card (V1 — first end-to-end render of the canonical brief)
 - [x] Phase 11: Docs (README expanded, CHANGELOG, info.md, examples)
+- [x] Phase 12: Polish & release prep (tagged v1.0.0-rc.1 pending live HA test)
 
-## Open questions / blockers
+## Open questions / blockers (post-v1.0.0-rc.1 — these gate the v1.0.0 final tag)
 
-- **`docs/img/preview.png` placeholder** — referenced from the README; needs a real screenshot of the card rendering a sample brief (capture during Phase 12 against a live HA).
-- **No browser-rendered manual test yet.** Unit/typecheck/build all green via CI but the card hasn't been mounted in a real HA dashboard. Phase 12 should install via HACS and verify: render of full + truncated briefs, history navigation, refresh button, AI degraded state, FR/EN switching.
-- **i18n parity stays at 32 keys** — if backend translation keys grow in Phase 12 (new alert wording, new comparison interpretations), the card EN+FR files must follow (R13 applies here too).
+- **No browser-rendered manual test yet** (Section 37). Unit/typecheck/build all green via CI but the card hasn't been mounted in a real HA dashboard. User to install via HACS and verify: render of full + truncated briefs, ← → history navigation, refresh button, AI degraded state, FR/EN switching, theme variables, `theme_override`.
+- **`docs/img/preview.png` is a grey labeled placeholder.** Real screenshot to come from the same live-HA install session that satisfies the manual test.
+- **i18n parity stays at 32 keys** — if backend translation keys grow before v1.0.0 final (new alert wording, new comparison interpretations), the card EN+FR files must follow (R13 applies here too).
+
+Decisions taken at v1.0.0-rc.1 cut (user-approved this session):
+- Tag scheme: `v1.0.0-rc.1` first, `v1.0.0` later after live-HA validation.
+- `MORNING_BRIEF_SPEC.md` was removed from this card repo (it stays in the integration repo + at the project root) to keep the HACS payload lean. CLAUDE.md updated to point at the sibling repo.
+- Placeholder preview.png in `docs/img/` chosen over removing the README image reference, so the layout matches the post-screenshot state.
 
 ## Session log
 
